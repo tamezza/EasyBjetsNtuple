@@ -61,15 +61,17 @@ setupATLAS
 source ../easyjet/setup.sh
 cd ../build
 source */setup.sh
+cd ..
 cd run
 lsetup pyami
 vms
 lsetup panda
-source ../easyjet/XbbCalib/scripts/grid/Zbbj_MC.sh
+source ../easyjet/XbbCalib/scripts/grid/Zbbj_data_run3.sh
 
 ```
 
-## Ntuple production Post-Processing for Run3
+## Ntuplesource ../easyjet/XbbCalib/scripts/grid/Zbbj_DATA_run3.sh
+ Post-Processing for Run3
 
 
 
