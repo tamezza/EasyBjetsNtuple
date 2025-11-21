@@ -58,12 +58,14 @@ Once we did all necessary Modification/editions its time to setup easyjet and su
 
 cd /EasyJets/easyjet
 setupATLAS
-source ../easyjet/setup.sh
 cd ../build
+source ../easyjet/setup.sh
+cmake ../easyjet/
+make -j4
 source */setup.sh
 cd ..
 cd run
-lsetup pyami
+lsetup pyamivms
 vms
 lsetup panda
 source ../easyjet/XbbCalib/scripts/grid/Zbbj_data_run3.sh
