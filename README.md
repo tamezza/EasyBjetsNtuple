@@ -16,8 +16,8 @@ Everything looks fine now its time to check the scripts for submitting jobs
 ```bash
 cd EasyJets/easyjet/XbbCalib/datasets/data/
 ls
-#the data for run2 *p6490 (actually *p6467) and run3 *p6700
-data_Run2_p6490.txt  data_Run3_p6700.txt
+#the data for run2 *p6490 (actually *p6467) and run3 *p7019
+data_Run2_p6490.txt  data_Run3_p7019.txt
 
 Then go to:
 
@@ -70,6 +70,17 @@ vms
 lsetup panda
 source ../easyjet/XbbCalib/scripts/grid/Zbbj_data_run3.sh
 
+```
+
+## easyjet_ntuples
+The created ntuples by easyjet are downloaded and stored in `easyjet_ntuples`
+
+```bash
+#/data/atlas/tamezza/BJetCalib_Run3/easyjet_ntuples
+rucio list-dids "user.tamezza.bjes_22Nov2025_NoMuon.700855.%TREE" | awk '{print $2}' > list_zbbj.txt
+cat list_zbbj.txt
+vim list_zbbj.txt
+rucio download `cat list_zbbj.txt`
 ```
 
 ## Ntuplesource ../easyjet/XbbCalib/scripts/grid/Zbbj_DATA_run3.sh
