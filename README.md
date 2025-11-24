@@ -77,10 +77,24 @@ The created ntuples by easyjet are downloaded and stored in `easyjet_ntuples`
 
 ```bash
 #/data/atlas/tamezza/BJetCalib_Run3/easyjet_ntuples
+
+cd Zbbj_bjes_22Nov2025
 rucio list-dids "user.tamezza.bjes_22Nov2025_NoMuon.700855.%TREE" | awk '{print $2}' > list_zbbj.txt
 cat list_zbbj.txt
 vim list_zbbj.txt
 rucio download `cat list_zbbj.txt`
+
+cd Dijets_bjes_22Nov2025
+rucio list-dids "user.tamezza.bjes_22Nov2025_NoMuon.8011%TREE" | awk '{print $2}' > list_dijets.txt
+cat list_dijets.txt
+vim list_dijets.txt
+rucio download `cat list_dijets.txt`
+
+cd Data_bjes_22Nov2025
+rucio list-dids "user.tamezza.bjes_22Nov2025_NoMuon.data%TREE" | awk '{print $2}' > list_data.txt
+cat list_data.txt
+vim list_data.txt
+rucio download `cat list_data.txt`
 ```
 
 ## Ntuplesource ../easyjet/XbbCalib/scripts/grid/Zbbj_DATA_run3.sh
