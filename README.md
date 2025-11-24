@@ -100,6 +100,30 @@ rucio download `cat list_data.txt`
 ## Ntuplesource ../easyjet/XbbCalib/scripts/grid/Zbbj_DATA_run3.sh
  Post-Processing for Run3
 
+## easyjet_ntuples post-process
+
+ntuples stored in BJetCalib_Run3/easyjet_ntuples/Dijets_bjes_22Nov2025
+
+```bash
+
+# ~/HH-Analysis-bbbb/PostJetCalib/fastpostez
+cd PostJetCalib
+fastpostez
+.
+run_bjes
+# Check the config zbby_bjes_config.json
+vim  zbbj_bjes_config.json
+
+# ZbbJets bJER_V02
+/data/atlas/croland/samples_bjes/bjes_26june
+
+vim zbbj_bjes_config.json
+
+run_bjes -c zbbj_bjes_config.json -i /data/atlas/tamezza/BJetCalib_Run3/easyjet_ntuples/samples_zbbj/Zbbj_bjes_22Nov2025 -o /data/atlas/tamezza/BJetCalib_Run3/JetCalibProcess/Zbbj/xbbCalib_ZbbJets_bJER -n 10
+
+./merge_zbbj.sh /data/atlas/tamezza/BJetCalib/JetCalibProcess/xbbCalib_ZbbJets_bJER_xxxxxxx /data/atlas/tamezza/BJetCalib/JetCalibNtuples/ZbbJets_bJER
+
+```
 
 
 
