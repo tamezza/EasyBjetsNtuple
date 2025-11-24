@@ -11,6 +11,22 @@ git clone https://gitlab.cern.ch/croland/easyjet.git
 git checkout croland-bjes
 ```
 
+Before running the job make test first
+
+```bash
+#check sample for MC signal Zbb+jets with DSID 700855
+rucio list-dids "mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.*"
+
+#list the differents files in the folder 
+rucio list-files mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.e8582_s4369_r16083_p6697
+
+#Select once file and download it
+rucio download mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.e8582_s4369_r16083_p6697/
+DAOD_PHYS.45320357._000007.pool.root.1
+
+```
+
+
 Everything looks fine now its time to check the scripts for submitting jobs
 
 ```bash
