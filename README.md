@@ -24,6 +24,9 @@ rucio list-files mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.e8
 rucio download mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.e8582_s4369_r16083_p6697/
 DAOD_PHYS.45320357._000007.pool.root.1
 
+rucio download mc23_13p6TeV:DAOD_PHYS.45320357._000007.pool.root.1
+
+
 #Run a test without submitting
 cd /home/tamezza/HH-Analysis-bbbb/Easyjet/run
 xbbcalib-ntupler ../easyjet/XbbCalib/jobTest/mc23_13p6TeV.700855.Sh_2214_Zbb_ptZ_200_ECMS.deriv.DAOD_PHYS.e8582_s4369_r16083_p6697/DAOD_PHYS.45320357._000007.pool.root.1 ../easyjet/XbbCalib/share/RunConfig_Zbbj_run3.yaml \
