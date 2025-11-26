@@ -159,6 +159,36 @@ run_bjes -c zbbj_bjes_config.json -i /data/atlas/tamezza/BJetCalib_Run3/easyjet_
 ```
 
 
+# Kill Jobs in the Grid
+
+To stop PanDA tasks you have two easy options.
+The numbers in the first column (e.g. 47644350, 47644349, …) are the taskIDs you need to kill.
+
+```bash
+lsetup panda          # if not already done in this shell
+pbook
+
+```
+
+In the pbook prompt:
+
+
+```bash
+>>> sync()            # updates your task list (optional but good)
+>>> show()            # see your tasks (optional)
+
+# Now kill each task by its ID:
+>>> kill(47644350)
+>>> kill(47644349)
+>>> kill(47644347)
+# ... etc for all the taskIDs you want to stop
+
+>>> exit()
+
+```
+
+
+
 
 
 
