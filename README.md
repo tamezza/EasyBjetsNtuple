@@ -101,6 +101,7 @@ cd run
 lsetup pyamivms
 vms
 lsetup panda
+ source ../easyjet/XbbCalib/scripts/grid/Zbbj_MC_run3.sh
 source ../easyjet/XbbCalib/scripts/grid/Zbbj_data_run3.sh
 
 ```
